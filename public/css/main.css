@@ -1,0 +1,42 @@
+.right{
+	text-align:right;
+}
+
+a{
+	text-decoration: none;
+	color:initial;
+}
+
+.ban{
+	text-align:left;
+	position:relative;
+	margin-top:110px;
+}
+
+.title{
+	font-weight: 700;
+	font-size:25px;
+	margin-left: 112px;
+}
+
+.create{
+	text-align: right;
+	margin-left: 40%;
+	margin-bottom:7px;
+	width: 60%;
+}
+
+.main{
+  list-style-type : none;
+  width: 54%;
+  margin-top: 23px;
+  margin-left: 9%;
+  border-bottom:1px solid #84b2e0;
+}
+
+.answer{
+	margin-left: 0%;
+	margin-top: -19px;
+	font-size: 85px;
+	position:absolute;
+}
