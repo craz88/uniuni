@@ -16,14 +16,14 @@ Route::get('/new','PostsController@New');
 Route::post('/next','PostsController@Next');
 Route::post('/main','PostsController@Main');
 
-
-
+Route::post('/main_input','MainController@Main_input');
 Route::get('/next','MainController@Paging');
 
 Route::get('{word?}','MainController@Serch_Paging');
 
 
+Route::post('/reply','SlatsController@Reply');
 
 Route::get('/Q&A/{id?}','SlatsController@Slat');
 
-Route::post('/reply','SlatsController@Reply');
+

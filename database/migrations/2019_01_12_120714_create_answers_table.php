@@ -17,11 +17,9 @@ class CreateAnswersTable extends Migration
             $table->increments('id');
             $table->text('reply');
             $table->string('answer_switch',1);
-            $table->integer('member_id')->unsigned();
+            $table->text('member');
             $table->integer('built_id')->unsigned();
-            $table->foreign('member_id')->references('id')->on('logins');
             $table->foreign('built_id')->references('id')->on('builts');
-            $table->unique(['member_id', 'built_id'],'uq_roles');
             $table->timestamps();
         });
     }

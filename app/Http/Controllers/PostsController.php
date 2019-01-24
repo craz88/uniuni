@@ -34,6 +34,9 @@ class PostsController extends Controller
     $pass = $request->pass;
     $user = Login::where('name', $name)
     ->where('pass', $pass)->first();
+    if (is_null($user)) {
+     return view('login',['records'=>'名前かパスワードが間違っているよ']);
+ }
     $data = $user->id;
     session(['data'=>"$data"]);
 $built = Built::latest()->paginate(4);

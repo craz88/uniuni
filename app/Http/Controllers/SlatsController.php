@@ -8,22 +8,39 @@ use Illuminate\Http\Request;
 class SlatsController extends Controller
 {
     public function Slat($id) {
-      $built = Built::findOrFail($id);
+     $built = Built::findOrFail($id);
+
+     $query = Answer::query();
+     $query->where('built_id',$id);
+     $reps = $query->latest()->get();
+
      $data = session()->get('data');
-     $replys="s";
-      return view('slat',['built'=>$built,'data'=>$data,'replys'=>$replys]);
+
+      return view('slat',['built'=>$built,'data'=>$data,'reps'=>$reps]);
       }
 
       public function Reply(Request $request) {
+     $built_id=$request->built_id;
+     $rep = $request->rep;
+     $answer_switch = 1;
+
+     $built = Built::findOrFail($built_id);
      $data = session()->get('data');
-     $reply = $request->reply;
      
+     
+
       $Answer = new Answer();
-     $Answer->built_id = $request->built_id;
-     $Answer->reply = $reply;
+     $Answer->built_id = $built_id;
+     $Answer->member = $data;
+     $Answer->reply = $rep;
      $Answer->answer_switch = $request->answer_switch;
      $Answer->save();
-      return view('slat',['replys'=>$reply,'data'=>$data]);
+     
+     $query = Answer::query();
+     $query->where('built_id',$built_id);
+     $reps = $query->latest()->get();
+
+      return view('slat',['built'=>$built,'reps'=>$reps,'data'=>$data]);
  }
 
 
