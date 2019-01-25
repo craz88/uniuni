@@ -22,6 +22,8 @@ Route::get('/next','MainController@Paging');
 Route::get('{word?}','MainController@Serch_Paging');
 
 
+Route::get('/answer/{switch?}','SlatsController@Switch');
+
 Route::post('/reply','SlatsController@Reply');
 
 Route::get('/Q&A/{id?}','SlatsController@Slat');

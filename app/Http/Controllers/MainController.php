@@ -9,11 +9,13 @@ class MainController extends Controller
 {
     public function Main_input(Request $request) {
      $data = $request->menber;
+     $answer_switch = 0;
 
      $Built = new Built();
      $Built->member_id = $data;
      $Built->title = $request->title;
      $Built->contents = $request->content;
+     $Built->answer_switch = $answer_switch;
      $Built->create = $request->day;
      $Built->save();
      

@@ -29,7 +29,7 @@ if (empty($ans)) {
 {{$built->member_id}}
 <br><br><br><br>
 <input type="hidden" name="answer_switch" value="0">
-<input type="hidden" name="built_id" value="{{$built->id}}">
+<input type="hidden" name="built_id" id="built_id" value="{{$built->id}}">
 <br><br><br>
 
 <h1>Answer</h1>
@@ -47,8 +47,8 @@ if (empty($ans)) {
 
 @endforelse
 </ul>
-@if ($data == $built->member_id && $ans == 1) 
-<input type="button" name="" value="成功だぜ！">
+@if ($data == $built->member_id && $ans == 1)
+<a href="" id="sss">解決</a> 
 @else
 ....
 @endif
@@ -57,6 +57,13 @@ if (empty($ans)) {
 <br>
 <input type="submit" formaction="{{ url('/reply') }}" value="送信">
 </form>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+ <script>
 
+ 	$("#sss").click(function(){
+ 		var swit = $("#built_id").val();
+     $("#sss").attr('href','/answer/'+swit);
+});
+ </script>
 </body>
 </html>

@@ -17,6 +17,7 @@ class CreateBuiltsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('contents');
+            $table->string('answer_switch',1);
             $table->integer('member_id')->unsigned();
             $table->foreign('member_id')->references('id')->on('logins');
             $table->text('create');
