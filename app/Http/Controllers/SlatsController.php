@@ -13,6 +13,8 @@ class SlatsController extends Controller
      $query = Answer::query();
      $query->where('built_id',$id);
      $reps = $query->latest()->get();
+     
+     // dd($reps->toArray());
 
      $data = session()->get('data');
 
@@ -40,7 +42,7 @@ class SlatsController extends Controller
      $query->where('built_id',$built_id);
      $reps = $query->latest()->get();
 
-      return view('slat',['built'=>$built,'reps'=>$reps,'data'=>$data]);
+      return view('slat',['built'=>$built,'reps'=>$reps]);
  }
 
 

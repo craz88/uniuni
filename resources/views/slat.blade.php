@@ -1,3 +1,14 @@
+<?php
+$data = session()->get('data');
+$ans=$reps->toArray();
+
+if (empty($ans)) {
+	$ans = 0;
+}else{
+	$ans = 1;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +25,8 @@
 {{$built->title}}
 <br>
 {{$built->contents}}
+<br>
+{{$built->member_id}}
 <br><br><br><br>
 <input type="hidden" name="answer_switch" value="0">
 <input type="hidden" name="built_id" value="{{$built->id}}">
@@ -34,6 +47,11 @@
 
 @endforelse
 </ul>
+@if ($data == $built->member_id && $ans == 1) 
+<input type="button" name="" value="成功だぜ！">
+@else
+....
+@endif
 <br><br><br><br><br><br>
 <input type="text" name="rep">
 <br>
