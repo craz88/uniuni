@@ -51,10 +51,10 @@ $done_qs = Built::where('member_id',$data)->get();
 
 <li class="main">
 	<div class="answer">
-		@if($answer == 1)
-		H
-		@elseif ($answer == 0)
+		@if($built->answer_switch == 1)
 		G
+		@elseif ($built->answer_switch == 0)
+		H
 		@else
 		out
 		@endif

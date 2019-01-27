@@ -20,7 +20,6 @@ class MainController extends Controller
      $Built->save();
      
      $built = Built::latest()->paginate(4);
-     // dd($built->toArray());
      return view('main',['data'=>$data],['builts'=>$built]);
  }
 
