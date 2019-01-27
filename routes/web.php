@@ -16,9 +16,12 @@ Route::get('/new','PostsController@New');
 Route::post('/next','PostsController@Next');
 Route::post('/main','PostsController@Main');
 
-Route::post('/main_input','MainController@Main_input');
-Route::get('/next','MainController@Paging');
 
+Route::get('/next','MainController@Paging');
+Route::get('/main','MainController@Paging');
+
+
+Route::post('/main_input','MainController@Main_input');
 Route::get('{word?}','MainController@Serch_Paging');
 
 
