@@ -22,7 +22,7 @@ Route::get('/next','MainController@Paging');
 Route::get('{word?}','MainController@Serch_Paging');
 
 
-Route::get('/answer/{switch?}','SlatsController@Switch');
+Route::post('/answer','SlatsController@Switch');
 
 Route::post('/reply','SlatsController@Reply');
 

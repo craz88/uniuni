@@ -17,9 +17,10 @@ class SlatsController extends Controller
       return view('slat',['built'=>$built,'data'=>$data,'reps'=>$reps]);
       }
 
-      public function Switch($switch) {
-     $built_1 = Built::findOrFail($switch);
-     $built_1->update(['answer_switch' => 1]);
+      public function Switch(Request $request) {
+        $switch = $request->built_id;
+     $built1 = Built::findOrFail($switch);
+     $built1->update(['answer_switch' => 1]);
        // dd($built->toArray());
      // $query = Answer::query();
      // $query->where('built_id',$switch);

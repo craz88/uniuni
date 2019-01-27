@@ -26,7 +26,7 @@ $done_qs = Built::where('member_id',$data)->get();
 <input type="submit" formaction="{{ url('/main_input') }}" value="送信">
 
 <input type="text" placeholder="key" name="word" id="word">
-<a href="/main_key" id="search">検索</a>
+<a href="/main_key" id="searc">検索</a>
 <!-- <input type="submit" formaction="{{ url('/main_key') }}" value="送信"> -->
 <br>
 <div class="right">
@@ -75,9 +75,9 @@ $done_qs = Built::where('member_id',$data)->get();
  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
  <script>
 
- 	$("#search").click(function(){
+ 	$("#searc").click(function(){
  		var word = $("#word").val();
-     $("#search").attr('href',word);
+     $("#searc").attr('href',word);
 });
  </script>
 </body>

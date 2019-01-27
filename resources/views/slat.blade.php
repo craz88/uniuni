@@ -1,7 +1,6 @@
 <?php
 $data = session()->get('data');
 $ans=$reps->toArray();
-
 if (empty($ans)) {
 	$ans = 0;
 }else{
@@ -47,8 +46,8 @@ if (empty($ans)) {
 
 @endforelse
 </ul>
-@if ($data == $built->member_id && $ans == 1)
-<a href="" id="sss">解決</a> 
+@if ($data == $built->member_id && $ans == 1 && $built->answer_switch == 0)
+<input type="submit" formaction="{{ url('/answer') }}" value="解決"> 
 @else
 ....
 @endif
@@ -57,13 +56,6 @@ if (empty($ans)) {
 <br>
 <input type="submit" formaction="{{ url('/reply') }}" value="送信">
 </form>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
- <script>
 
- 	$("#sss").click(function(){
- 		var swit = $("#built_id").val();
-     $("#sss").attr('href','/answer/'+swit);
-});
- </script>
 </body>
 </html>
