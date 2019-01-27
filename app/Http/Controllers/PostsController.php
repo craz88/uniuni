@@ -50,7 +50,6 @@ $built = Built::latest()->paginate(4);
  public function Main(Request $request) {
     $name = $request->name;
     $pass = $request->pass;
-    $user = array();
     $user = Login::where('name', $name)
     ->where('pass', $pass)
     ->first();
@@ -60,7 +59,10 @@ $built = Built::latest()->paginate(4);
      $login->name = $name;
      $login->pass = $pass;
      $login->save();
-     return view('main');
+     $data = $login->id;
+    session(['data'=>"$data"]);
+$built = Built::latest()->paginate(4);
+     return view('main',['data'=>$data,'builts'=>$built]);
  }
      return view('new',['records'=>'名前とパスワード両方が誰かとかぶっちったよ']);
 

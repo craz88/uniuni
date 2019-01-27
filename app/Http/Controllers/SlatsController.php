@@ -9,35 +9,26 @@ class SlatsController extends Controller
 {
     public function Slat($id) {
      $built = Built::findOrFail($id);
-
      $query = Answer::query();
      $query->where('built_id',$id);
      $reps = $query->latest()->get();
-     
      // dd($reps->toArray());
-
      $data = session()->get('data');
-
       return view('slat',['built'=>$built,'data'=>$data,'reps'=>$reps]);
       }
 
-
       public function Switch($switch) {
-     $built = Built::findOrFail($switch);
-     $built->update(['answer_switch' => 1]);
+     $built_1 = Built::findOrFail($switch);
+     $built_1->update(['answer_switch' => 1]);
        // dd($built->toArray());
-     $query = Answer::query();
-     $query->where('built_id',$switch);
-     $reps = $query->latest()->get();
-     
+     // $query = Answer::query();
+     // $query->where('built_id',$switch);
+     // $reps = $query->latest()->get();
       // dd($reps->toArray());
-
+     $built = Built::latest()->paginate(4);
      $data = session()->get('data');
-
-      return view('main',['built'=>$built,'data'=>$data,'reps'=>$reps]);
+      return view('main',['builts'=>$built,'data'=>$data]);
       }
-
-
 
       public function Reply(Request $request) {
      $built_id=$request->built_id;
