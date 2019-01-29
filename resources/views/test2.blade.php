@@ -88,7 +88,7 @@
 <body>
  
 <div id="demoslide01" class="main_visual bg_aaa">
-  <p><a data-target="modal1" name="modaler" class="modal_open"><img src="{{ asset('img/search.jpeg') }}"></a></p>
+  <p><a data-target="modal1" name="modaler" class="modal_open"><img src="{{ asset('img/write.jpeg') }}"></a></p>
 </div>
 
 <div id="demoslide01" class="main_visual bg_aaa">
@@ -96,17 +96,19 @@
 </div>
 
 <div id="demoslide01" class="main_visual bg_aaa">
-  <p><a data-target="modal3" name="modaler" class="modal_open"><img src="{{ asset('img/search.jpeg') }}"></a></p>
+  <p><a data-target="modal3" name="modaler" class="modal_open"><img src="{{ asset('img/history.jpeg') }}"></a></p>
 </div>
  
  
 <!-- モーダル1 -->
 <div id="modal1" class="modal_box">
   <h2>ウィンドウ1</h2>
-  <p>モーダルウィンドウが開きました。</p>
+  <p style="margin-bottom: -33px;">モーダルウィンドウが開きました。</p>
  
-  <div class="link_area">
-    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span>ウィンドウ2へ</span></a></p>
+  <div class="link_area" style="overflow: hidden;
+    margin: auto 0px;
+    text-align: right;">
+    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img src="{{ asset('img/right.jpeg') }}"></span></a></p>
   </div>
  
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
@@ -116,14 +118,25 @@
 <div id="modal2" class="modal_box">
   <h2>ウィンドウ2</h2>
  
-  <p>あのイーハトーヴォのすきとおった風、<br />夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、<br />郊外のぎらぎらひかる草の波。<br />　<br />この様にウィンドウの高さが違う場合でも<br />この様に表示することができます。</p>
- 
-  <div class="link_area">
-    <ul>
-      <li class="modal_link"><a data-target="modal1" class="modal_switch"><span>ウィンドウ1へ</span></a></li>
-      <li class="modal_link"><a data-target="modal3" class="modal_switch"><span>ウィンドウ3へ</span></a></li>;
-    </ul>
+  <p style=" margin-bottom: -63px;">aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+  
+  <ul>
+  	<li>
+  <div class="link_area" style="overflow: hidden;
+    ">
+    <p class="modal_link"><a data-target="modal1" class="modal_switch"><span><img src="{{ asset('img/left.jpeg') }}"></span></a></p>
   </div>
+  </li>
+
+  <li class="air"></li>
+ 
+ <li>
+  <div class="link_area" style="overflow: hidden;
+    ">
+    <p class="modal_link"><a data-target="modal3" class="modal_switch"><span><img src="{{ asset('img/right.jpeg') }}"></span></a></p>
+  </div>
+  </li>
+  </ul>
  
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
 </div>
@@ -132,13 +145,31 @@
 <div id="modal3" class="modal_box">
   <h2>ウィンドウ3</h2>
  
-  <div class="link_area">
-    <p class="modal_link"><a data-target="modal2" class="modal_switch><span>ウィンドウ2へ</span></a></p>
+  <div class="link_area" style="overflow: hidden;
+    margin: auto 0px;
+    text-align: left;">
+    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img src="{{ asset('img/left.jpeg') }}"></span></a></p>
   </div>
  
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
 </div>
  <style type="text/css">
+ ul{
+ 	padding:initial;
+    	margin:initial;
+ }
+    ul li{
+    	padding:initial;
+    	margin:initial;
+    	display: inline-block;
+    	text-align:center;
+
+    }
+
+    .air{
+    	margin:0px 35%;
+    }
+
   	.modal_open{
     display: inline-block;
     margin: 3vw;
@@ -190,9 +221,7 @@
  
 .link_area {
     overflow: hidden;
-    max-width: 410px;
-    margin: 60px auto 0;
-    text-align: center;
+    margin: auto;
 }
  
 .link_area .modal_link {
@@ -200,22 +229,12 @@
 }
  
 .link_area .modal_link a {
-    display: inline-block;
-    width: 180px;
-    color: #000;
     line-height: 2.5;
     text-decoration: none;
     margin: 0 10px;
-    background: #e6e6e6;
 }
  
-.link-area ul li.modal_link:first-child a {
-    float: left;
-}
- 
-.link-area ul li.modal_link:last-child a {
-    float: right;
-}
+
  
  
 @media screen and (max-width: 769px) {
@@ -244,14 +263,6 @@
       margin: 15px auto 0;
   }
  
-  .link_area ul li.modal_link:first-child a {
-      float: none;
-      margin-top: 0;
-  }
- 
-  .link_area ul li.modal_link:last-child a {
-      float: none;
-  }
  
 }
   </style>
