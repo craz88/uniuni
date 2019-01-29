@@ -39,6 +39,9 @@ class MainController extends Controller
     return view('main',['data'=>$data,'builts'=>$built]);
  }
 
+public function S() {
+     return view('test2');
+ }
  //    public function Main_key() {
  //        $word = Input::get('word');
  //        dd($word);
