@@ -22,7 +22,7 @@ Route::get('/main','MainController@Paging');
 
 
 Route::post('/main_input','MainController@Main_input');
-// Route::get('{word?}','MainController@Serch_Paging');
+Route::get('{word?}','MainController@Serch_Paging');
 
 
 Route::post('/answer','SlatsController@Switch');
@@ -32,5 +32,5 @@ Route::post('/reply','SlatsController@Reply');
 Route::get('/Q&A/{id?}','SlatsController@Slat');
 
 
-Route::get('/test2','MainController@S');
+// Route::get('/test2','MainController@S');
 

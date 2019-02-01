@@ -1,39 +1,74 @@
-<?php
-use App\Built;
-$day = date("Y/m月d日");
-$answer = 1;
-$done_qs = Built::where('member_id',$data)->get();
-// dd($done_qs->toArray());
-?>
+@extends('test2')
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-</head>
-<body>
+ @section('header')
+<div id="demoslide01" class="main_visual bg_aaa">
+  <p><a data-target="modal1" name="modaler" class="modal_open"><img src="{{ asset('img/write.jpeg') }}"></a></p>
+</div>
 
-<form action="" method="post">
-      {{ csrf_field() }}
-      {{$data}}
-<input type="hidden" placeholder="" required="" name="menber" value="{{$data}}">
-<input type="hidden" placeholder="" required="" name="day" value="{{$day}}">
-<input type="text" placeholder="Title" required="" name="title" >
+<div id="demoslide01" class="main_visual bg_aaa">
+  <p><a data-target="modal2" name="modaler" class="modal_open"><img src="{{ asset('img/search.jpeg') }}"></a></p>
+</div>
+
+<div id="demoslide01" class="main_visual bg_aaa">
+  <p><a data-target="modal3" name="modaler" class="modal_open"><img src="{{ asset('img/history.jpeg') }}"></a></p>
+</div>
+ 
+ 
+<!-- モーダル1 -->
+<div id="modal1" class="modal_box">
+  <h2>ウィンドウ1</h2>
+  <p style="margin-bottom: -33px;">
+    <input type="text" placeholder="Title" required="" name="title" >
 <input type="text" placeholder="Contents" required="" name="content" >
 <input type="submit" formaction="{{ url('/main_input') }}" value="送信">
-
-<input type="text" placeholder="key" name="word" id="word">
+  </p>
+ 
+  <div class="link_area" style="overflow: hidden;
+    margin: auto 0px;
+    text-align: right;">
+    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img src="{{ asset('img/right.jpeg') }}"></span></a></p>
+  </div>
+ 
+  <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
+</div>
+ 
+<!-- モーダル2 -->
+<div id="modal2" class="modal_box">
+  <h2>ウィンドウ2</h2>
+ 
+  <p style=" margin-bottom: -63px;">
+    <input type="text" placeholder="key" name="word" id="word">
 <a href="/main_key" id="searc">検索</a>
-<!-- <input type="submit" formaction="{{ url('/main_key') }}" value="送信"> -->
-<br>
-<div class="right">
+  </p>
+  
+  <ul>
+    <li>
+  <div class="link_area" style="overflow: hidden;
+    ">
+    <p class="modal_link"><a data-target="modal1" class="modal_switch"><span><img src="{{ asset('img/left.jpeg') }}"></span></a></p>
+  </div>
+  </li>
 
-	@if (!empty($done_qs))
+  <li class="air"></li>
+ 
+ <li>
+  <div class="link_area" style="overflow: hidden;
+    ">
+    <p class="modal_link"><a data-target="modal3" class="modal_switch"><span><img src="{{ asset('img/right.jpeg') }}"></span></a></p>
+  </div>
+  </li>
+  </ul>
+ 
+  <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
+</div>
+ 
+<!-- モーダル3 -->
+<div id="modal3" class="modal_box">
+  <h2>ウィンドウ3</h2>
+ <p style=" margin-bottom: -63px;">
+   @if (!empty($done_qs))
 
-	@forelse ($done_qs as $done_q)
+  @forelse ($done_qs as $done_q)
  <p>{{$done_q->id}}</p>
  <p>{{$done_q->title}}</p>
 
@@ -43,42 +78,13 @@ $done_qs = Built::where('member_id',$data)->get();
 
 @endforelse
 @endif
+  </p>
+  <div class="link_area" style="overflow: hidden;
+    margin: auto 0px;
+    text-align: left;">
+    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img src="{{ asset('img/left.jpeg') }}"></span></a></p>
+  </div>
+ 
+  <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
 </div>
-
-
-<ul class="ban">
-@forelse ($builts as $built)
-
-<li class="main">
-	<div class="answer">
-		@if($built->answer_switch == 1)
-		G
-		@elseif ($built->answer_switch == 0)
-		H
-		@else
-		out
-		@endif
-	</div>
- <a href="{{ url('/Q&A',$built->id) }}" class="title" title="{{$built->title}}">{{$built->title}}</a>
- <p class="create">{{$built->create}}</p>
-</li>
-
- @empty
-
- <p>no data</p>
-
-@endforelse
-</ul>
-{{ $builts->links('') }}
-
-</form>
- <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
- <script>
-
- 	$("#searc").click(function(){
- 		var word = $("#word").val();
-     $("#searc").attr('href',word);
-});
- </script>
-</body>
-</html>
+@endsection

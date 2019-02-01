@@ -1,4 +1,20 @@
-.modal_open{
+ ul{
+  padding:initial;
+      margin:initial;
+ }
+    ul li{
+      padding:initial;
+      margin:initial;
+      display: inline-block;
+      text-align:center;
+
+    }
+
+    .air{
+      margin:0px 35%;
+    }
+
+    .modal_open{
     display: inline-block;
     margin: 3vw;
     float: left; 
@@ -49,9 +65,7 @@
  
 .link_area {
     overflow: hidden;
-    max-width: 410px;
-    margin: 60px auto 0;
-    text-align: center;
+    margin: auto;
 }
  
 .link_area .modal_link {
@@ -59,22 +73,12 @@
 }
  
 .link_area .modal_link a {
-    display: inline-block;
-    width: 180px;
-    color: #000;
     line-height: 2.5;
     text-decoration: none;
     margin: 0 10px;
-    background: #e6e6e6;
 }
  
-.link-area ul li.modal_link:first-child a {
-    float: left;
-}
- 
-.link-area ul li.modal_link:last-child a {
-    float: right;
-}
+
  
  
 @media screen and (max-width: 769px) {
@@ -103,13 +107,5 @@
       margin: 15px auto 0;
   }
  
-  .link_area ul li.modal_link:first-child a {
-      float: none;
-      margin-top: 0;
-  }
- 
-  .link_area ul li.modal_link:last-child a {
-      float: none;
-  }
  
 }
