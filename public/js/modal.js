@@ -19,7 +19,7 @@
         var x = (w - $(modal).outerWidth(true)) / 2;
         var y = (h - $(modal).outerHeight(true)) / 2;
  
-        $(modal).css({'left': x + 'px','top': y + 'px'});
+        $(modal).css({'left': x + 'px','top': y-50 + 'px'});
     }
  
     // modalResizeを実行
@@ -58,7 +58,7 @@
           var x = (w - $(modal).outerWidth(true)) / 2;
           var y = (h - $(modal).outerHeight(true)) / 2;
  
-          $(modal).css({'left': x + 'px','top': y + 'px'});
+          $(modal).css({'left': x + 'px','top': y-50 + 'px'});
       }
  
       // modalResizeを実行

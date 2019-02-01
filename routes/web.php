@@ -19,6 +19,7 @@ Route::post('/main','PostsController@Main');
 
 Route::get('/next','MainController@Paging');
 Route::get('/main','MainController@Paging');
+Route::get('/main_input','MainController@Paging');
 
 
 Route::post('/main_input','MainController@Main_input');

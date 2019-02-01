@@ -24,15 +24,16 @@
  
 <!-- モーダル1 -->
 <div id="modal1" class="modal_box">
-  <h2>ウィンドウ1</h2>
-  <p style="margin-bottom: -33px;">
-    <input type="text" placeholder="Title" required="" name="title" >
-<input type="text" placeholder="Contents" required="" name="content" >
-<input type="submit" formaction="{{ url('/main_input') }}" value="送信">
-  </p>
+  <div class="moda1" style="margin-top: -30px;">
+    <input type="text" placeholder="Title" required="" name="title" class="title_input">
+    <br>
+    <textarea placeholder="Contents" required="" name="content" class="contents_input"></textarea>
+<br>
+<input type="submit" formaction="{{ url('/main_input') }}" value="送信" class="button">
+  </div>
  
   <div class="link_area" style="overflow: hidden;
-    margin: auto 0px;
+    margin-top:-236px;
     text-align: right;">
     <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img src="{{ asset('img/right.jpeg') }}"></span></a></p>
   </div>
@@ -42,13 +43,11 @@
  
 <!-- モーダル2 -->
 <div id="modal2" class="modal_box">
-  <h2>ウィンドウ2</h2>
- 
-  <p style=" margin-bottom: -63px;">
-    <input type="text" placeholder="key" name="word" id="word">
-<a href="/main_key" id="searc">検索</a>
-  </p>
-  
+ <br><br><br><br><br><br>
+  <div class="modal2" style="margin-bottom:-52px;">
+    <input type="text" placeholder="key" name="word" id="word" class="search_box">
+<a href="/main_key" id="searc" class="search_button">検索</a>
+  </div>
   <ul>
   	<li>
   <div class="link_area" style="overflow: hidden;
