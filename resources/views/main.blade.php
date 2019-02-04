@@ -20,7 +20,6 @@ $done_qs = Built::where('member_id',$data)->get();
 
 <form action="" method="post">
       {{ csrf_field() }}
-      {{$data}}
 
       @component('head')
       @slot('header')
@@ -34,13 +33,14 @@ $done_qs = Built::where('member_id',$data)->get();
 
 <!-- <input type="submit" formaction="{{ url('/main_key') }}" value="送信"> -->
 <br>
+
 <div class="right">
 
 	@if (!empty($done_qs))
 
 	@forelse ($done_qs as $done_q)
- <p>{{$done_q->id}}</p>
- <p>{{$done_q->title}}</p>
+ <input type="text" name="set" value="{{$done_q->id}}">
+ <input type="text" name="set1" value="{{$done_q->title}}">
 
  @empty
 
@@ -50,12 +50,13 @@ $done_qs = Built::where('member_id',$data)->get();
 @endif
 </div>
 
+      {{$data}}
 
 <ul class="ban">
 @forelse ($builts as $built)
 
 <li class="main" style="text-align:initial;">
-	<div class="answer">
+		<span class="answer">
 		@if($built->answer_switch == 1)
 		G
 		@elseif ($built->answer_switch == 0)
@@ -63,7 +64,7 @@ $done_qs = Built::where('member_id',$data)->get();
 		@else
 		out
 		@endif
-	</div>
+	</span>
  <a href="{{ url('/Q&A',$built->id) }}" class="title" title="{{$built->title}}">{{$built->title}}</a>
  <p class="create">{{$built->create}}</p>
 </li>

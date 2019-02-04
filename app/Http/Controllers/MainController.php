@@ -40,7 +40,7 @@ class MainController extends Controller
  }
 
 public function S() {
-     return view('test2');
+     return view('teest');
  }
  //    public function Main_key() {
  //        $word = Input::get('word');

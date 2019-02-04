@@ -33,5 +33,5 @@ Route::post('/reply','SlatsController@Reply');
 Route::get('/Q&A/{id?}','SlatsController@Slat');
 
 
-// Route::get('/test2','MainController@S');
+ Route::get('/test/test','MainController@S');
 

@@ -1,9 +1,23 @@
 	$(function(){
+
+     //履歴習得
+    for(var i = 0; i < $('[name=set]').length; i++) {
+      //mathの中には質問履歴のidが入っている。
+       math = document.getElementsByName('set')[i].value;
+       console.log(math);
+       document.getElementById("show")
+       .setAttribute("href", document.getElementById("show")
+        .getAttribute("href") + "/" + $('[name=set]')[i].value);
+    $('#show').append($('[name=set1]')[i].value);
+  }
+
+
    
   // 「.modal_open」をクリックしたらモーダルと黒い背景を表示する
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; $('[name=modaler]').length; i++) {
       modal_open = document.getElementsByName('modaler')[i];
       modal_open.addEventListener('click', function() {
+
     // 黒い背景をbody内に追加
     $('body').append('<div class="modal_bg"></div>');
     $('.modal_bg').fadeIn();

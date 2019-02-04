@@ -17,6 +17,8 @@ a{
 	font-weight: 700;
 	font-size:25px;
 	margin-left: 112px;
+	display:inline-block;
+	vertical-align:top;
 }
 
 .create{
@@ -36,7 +38,7 @@ a{
 
 .answer{
 	margin-left: 0%;
-	margin-top: -19px;
+	margin-top: -23px;
 	font-size: 85px;
 	position:absolute;
 }

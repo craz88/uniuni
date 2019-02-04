@@ -73,18 +73,7 @@
 <div id="modal3" class="modal_box">
   <h2>ウィンドウ3</h2>
   <p style=" margin-bottom: -63px;">
-    @if (!empty($done_qs))
-
-  @forelse ($done_qs as $done_q)
- <p>{{$done_q->id}}</p>
- <p>{{$done_q->title}}</p>
-
- @empty
-
- <p>no data</p>
-
-@endforelse
-@endif
+    <a id="show" href="Q&A"></a>
   </p>
  
   <div class="link_area" style="overflow: hidden;
