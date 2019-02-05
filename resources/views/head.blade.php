@@ -20,8 +20,9 @@
 <div id="demoslide01" class="main_visual bg_aaa">
   <p><a data-target="modal3" name="modaler" class="modal_open"><img src="{{ asset('img/history.jpeg') }}"></a></p>
 </div>
- 
- 
+</header>
+<main>
+   
 <!-- モーダル1 -->
 <div id="modal1" class="modal_box">
   <div class="moda1" style="margin-top: -30px;">
@@ -49,7 +50,7 @@
 <a href="/main_key" id="searc" class="search_button">検索</a>
   </div>
   <ul>
-  	<li>
+    <li>
   <div class="link_area" style="overflow: hidden;
     ">
     <p class="modal_link"><a data-target="modal1" class="modal_switch"><span><img src="{{ asset('img/left.jpeg') }}"></span></a></p>
@@ -92,6 +93,6 @@
  
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
 </div>
-</header>
+</main>
 </body>
 </html>
