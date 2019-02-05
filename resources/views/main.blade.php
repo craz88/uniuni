@@ -2,7 +2,7 @@
 use App\Built;
 $day = date("Y/m月d日");
 $answer = 1;
-$done_qs = Built::where('member_id',$data)->get();
+$done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 // dd($done_qs->toArray());
 ?>
 
@@ -39,6 +39,8 @@ $done_qs = Built::where('member_id',$data)->get();
 	@if (!empty($done_qs))
 
 	@forelse ($done_qs as $done_q)
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
  <input type="text" name="set" value="{{$done_q->id}}">
  <input type="text" name="set1" value="{{$done_q->title}}">
 

@@ -73,7 +73,15 @@
 <div id="modal3" class="modal_box">
   <h2>ウィンドウ3</h2>
   <p style=" margin-bottom: -63px;">
-    <a id="show" href="Q&A"></a>
+    <a name="show" href="Q&A"></a>
+    <br>
+    <a name="show" href="Q&A"></a>
+    <br>
+    <a name="show" href="Q&A"></a>
+    <br>
+    <a name="show" href="Q&A"></a>
+    <br>
+    <a name="show" href="Q&A"></a>
   </p>
  
   <div class="link_area" style="overflow: hidden;

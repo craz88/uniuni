@@ -5,10 +5,11 @@
       //mathの中には質問履歴のidが入っている。
        math = document.getElementsByName('set')[i].value;
        console.log(math);
-       document.getElementById("show")
-       .setAttribute("href", document.getElementById("show")
-        .getAttribute("href") + "/" + $('[name=set]')[i].value);
-    $('#show').append($('[name=set1]')[i].value);
+           dd = document.getElementsByName("show")[i];
+       console.log(dd);
+       dd.setAttribute("href", dd
+        .getAttribute("href") + "/" + math);
+    $(dd).append($('[name=set1]')[i].value);
   }
 
 
