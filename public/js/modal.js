@@ -4,12 +4,10 @@
     for(var i = 0; i < $('[name=set]').length; i++) {
       //mathの中には質問履歴のidが入っている。
        math = document.getElementsByName('set')[i].value;
-       console.log(math);
-           dd = document.getElementsByName("show")[i];
-       console.log(dd);
-       dd.setAttribute("href", dd
+       done_show = document.getElementsByName("show")[i];
+       done_show.setAttribute("href", done_show
         .getAttribute("href") + "/" + math);
-    $(dd).append($('[name=set1]')[i].value);
+    $(done_show).append($('[name=set1]')[i].value);
   }
 
 

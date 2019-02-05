@@ -10,21 +10,21 @@
 <body>
  <header>
 <div id="demoslide01" class="main_visual bg_aaa">
-  <p><a data-target="modal1" name="modaler" class="modal_open"><img src="{{ asset('img/write.jpeg') }}"></a></p>
+  <a data-target="modal1" name="modaler" class="modal_open"><img src="{{ asset('img/write.jpeg') }}"></a>
 </div>
 
 <div id="demoslide01" class="main_visual bg_aaa">
-  <p><a data-target="modal2" name="modaler" class="modal_open"><img src="{{ asset('img/search.jpeg') }}"></a></p>
+  <a data-target="modal2" name="modaler" class="modal_open"><img src="{{ asset('img/search.jpeg') }}"></a>
 </div>
 
 <div id="demoslide01" class="main_visual bg_aaa">
-  <p><a data-target="modal3" name="modaler" class="modal_open"><img src="{{ asset('img/history.jpeg') }}"></a></p>
+  <a data-target="modal3" name="modaler" class="modal_open"><img src="{{ asset('img/history.jpeg') }}"></a>
 </div>
 </header>
 <main>
    
 <!-- モーダル1 -->
-<div id="modal1" class="modal_box">
+<div id="modal1" class="modal_box" style="padding: 84px 2vw 200px;">
   <div class="moda1" style="margin-top: -30px;">
     <input type="text" placeholder="Title" required="" name="title" class="title_input">
     <br>
@@ -43,7 +43,7 @@
 </div>
  
 <!-- モーダル2 -->
-<div id="modal2" class="modal_box">
+<div id="modal2" class="modal_box" style="padding: 0px 2vw 78px;">
  <br><br><br><br><br><br>
   <div class="modal2" style="margin-bottom:-52px;">
     <input type="text" placeholder="key" name="word" id="word" class="search_box">
@@ -71,22 +71,23 @@
 </div>
  
 <!-- モーダル3 -->
-<div id="modal3" class="modal_box">
-  <h2>ウィンドウ3</h2>
-  <p style=" margin-bottom: -63px;">
-    <a name="show" href="Q&A"></a>
+<div id="modal3" class="modal_box" style="padding: 60px 2vw 103px;">
+    <span class="modal3_log">
+    </span>
+    <a name="show" class="log" href="Q&A"></a>
     <br>
-    <a name="show" href="Q&A"></a>
+    <a name="show" class="log" href="Q&A"></a>
     <br>
-    <a name="show" href="Q&A"></a>
+    <a name="show" class="log" href="Q&A"></a>
     <br>
-    <a name="show" href="Q&A"></a>
+    <a name="show" class="log" href="Q&A"></a>
     <br>
-    <a name="show" href="Q&A"></a>
-  </p>
+    <a name="show" class="log" href="Q&A"></a>
+    <br><br>
+    <a href="">all</a>
  
   <div class="link_area" style="overflow: hidden;
-    margin: auto 0px;
+    margin-top:-118px;
     text-align: left;">
     <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img src="{{ asset('img/left.jpeg') }}"></span></a></p>
   </div>
