@@ -26,7 +26,7 @@ class SlatsController extends Controller
      // $query->where('built_id',$switch);
      // $reps = $query->latest()->get();
       // dd($reps->toArray());
-     $built = Built::latest()->paginate(4);
+     $built = Built::latest()->paginate(8);
      $data = session()->get('data');
       return view('main',['builts'=>$built,'data'=>$data]);
       }

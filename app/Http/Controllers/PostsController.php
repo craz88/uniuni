@@ -39,7 +39,7 @@ class PostsController extends Controller
  }
     $data = $user->id;
     session(['data'=>"$data"]);
-$built = Built::latest()->paginate(4);
+$built = Built::latest()->paginate(8);
     // dd($data);
     return view('main',['data'=>$data,'builts'=>$built]);
  }
@@ -61,7 +61,7 @@ $built = Built::latest()->paginate(4);
      $login->save();
      $data = $login->id;
     session(['data'=>"$data"]);
-$built = Built::latest()->paginate(4);
+$built = Built::latest()->paginate(8);
      return view('main',['data'=>$data,'builts'=>$built]);
  }
      return view('new',['records'=>'名前とパスワード両方が誰かとかぶっちったよ']);

@@ -9,6 +9,11 @@
  
 <body>
  <header>
+
+<div id="demoslide01" class="main_visual bg_aaa">
+  <a href="/main" class="modal_open" style="transform: scale(-1, 1);"><img src="{{ asset('img/back.png') }}"></a>
+</div>
+
 <div id="demoslide01" class="main_visual bg_aaa">
   <a data-target="modal1" name="modaler" class="modal_open"><img src="{{ asset('img/write.jpeg') }}"></a>
 </div>
@@ -25,7 +30,7 @@
    
 <!-- モーダル1 -->
 <div id="modal1" class="modal_box" style="padding: 84px 2vw 200px;">
-  <div class="moda1" style="margin-top: -30px;">
+  <div class="moda1" name="youso" style="margin-top: -30px;">
     <input type="text" placeholder="Title" required="" name="title" class="title_input">
     <br>
     <textarea placeholder="Contents" required="" name="content" class="contents_input"></textarea>

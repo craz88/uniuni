@@ -7,16 +7,13 @@
        done_show = document.getElementsByName("show")[i];
        done_show.setAttribute("href", done_show
         .getAttribute("href") + "/" + math);
-    $(done_show).append($('[name=set1]')[i].value);
   }
-
-
    
   // 「.modal_open」をクリックしたらモーダルと黒い背景を表示する
   for (var i = 0; $('[name=modaler]').length; i++) {
       modal_open = document.getElementsByName('modaler')[i];
       modal_open.addEventListener('click', function() {
-
+     
     // 黒い背景をbody内に追加
     $('body').append('<div class="modal_bg"></div>');
     $('.modal_bg').fadeIn();
@@ -37,12 +34,20 @@
  
     // modalResizeを実行
     modalResize();
- 
+
     // modalをフェードインで表示
     $(modal).fadeIn();
- 
+     // $('[name=youso]').append('<input type="text" placeholder="Title" required="" name="title" class="title_input">');
+     // $('[name=youso]').append('<br>');
+     // $('[name=youso]').append('<textarea placeholder="Contents" required="" name="content" class="contents_input"></textarea>');
+     // $('[name=youso]').append('<br>');
+     
+     
+
     // .modal_bgか.modal_closeをクリックしたらモーダルと背景をフェードアウトさせる
-    $('.modal_bg, .modal_close').off().click(function(){
+    $('.modal_bg, .modal_close').click(function(){
+        // $('.title_input').remove();
+        // $('.contents_input').remove();
         $('.modal_box').fadeOut();
         $('.modal_bg').fadeOut('slow',function(){
             $('.modal_bg').remove();

@@ -129,6 +129,24 @@ resize: none;
     width:75px;
 }
 
+/*.button{
+  margin-top:334px;
+  margin-left:25%;
+      background: initial;
+    color: initial;
+    font-size: initial;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #7E7E7E;
+    border: solid 2px #7E7E7E;
+    border-radius: 3px;
+    transition: .4s;
+    width:75px;
+    position:absolute;
+}*/
+
 .button:hover {
     background: black;
     color: white;
@@ -184,6 +202,8 @@ header{
   margin-top:-1%;
   padding-left:7%;
 }
+
+
  
  
 @media screen and (max-width: 769px) {
