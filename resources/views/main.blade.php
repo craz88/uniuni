@@ -12,9 +12,11 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 	<title></title>
 	<meta charset="utf-8">
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script type="text/javascript" src="js/ser.js"></script>
+	<script src="{{ asset('js/ser.js') }}"></script>
+	<script src="{{ asset('js/modal.js') }}"></script>
+	<link rel="stylesheet" href="{{ asset('/css/main.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('/css/styl.css') }}" type="text/css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
 

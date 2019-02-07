@@ -14,9 +14,12 @@ if (empty($ans)) {
 <html>
 <head>
 	<title></title>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="{{ asset('js/slat.js') }}"></script>
+	<script src="{{ asset('js/modal.js') }}"></script>
+	<link rel="stylesheet" href="{{ asset('/css/styl.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('/css/slat.css') }}" type="text/css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/css/styl.css">
-  <link rel="stylesheet" type="text/css" href="/css/slat.css">
 </head>
 <body>
 
@@ -28,6 +31,10 @@ if (empty($ans)) {
       @endslot
       @endcomponent
 	<br><br>
+
+<input type="hidden" name="answer_switch" value="0">
+<input type="hidden" name="built_id" id="built_id" value="{{$built->id}}">
+
 @if (!empty($done_qs))
 
 	@forelse ($done_qs as $done_q)
@@ -43,25 +50,19 @@ if (empty($ans)) {
 <div class="content">
 
 
-<h1>Question</h1>
-<br>
- <h2>{{$built->title}}</h2>
+<h1>{{$built->title}}</h1>
 <br>
 {{$built->contents}}
 <br>
-{{$built->member_id}}
-<br><br><br><br>
-<input type="hidden" name="answer_switch" value="0">
-<input type="hidden" name="built_id" id="built_id" value="{{$built->id}}">
 <br><br><br>
 
 
 
-<h2>Answer</h2>
-<br>
 <ul>
 @forelse ($reps as $rep)
 
+<h1>Answer</h1>
+<br>
 <li class="main">
  <p class="create">{{$rep->reply}}</p>
 </li>
@@ -85,97 +86,6 @@ if (empty($ans)) {
 </form>
 
 
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script>
-  		$(function(){
-
-     //履歴習得
-    for(var i = 0; i < $('[name=set]').length; i++) {
-      //mathの中には質問履歴のidが入っている。
-       math = document.getElementsByName('set')[i].value;
-       done_show = document.getElementsByName("show")[i];
-       done_show.setAttribute("href", done_show
-        .getAttribute("href") + "/" + math);
-    $(done_show).append($('[name=set1]')[i].value);
-  }
-
-
-   
-  // 「.modal_open」をクリックしたらモーダルと黒い背景を表示する
-  for (var i = 0; $('[name=modaler]').length; i++) {
-      modal_open = document.getElementsByName('modaler')[i];
-      modal_open.addEventListener('click', function() {
-
-    // 黒い背景をbody内に追加
-    $('body').append('<div class="modal_bg"></div>');
-    $('.modal_bg').fadeIn();
- 
-    // data-targetの内容をIDにしてmodalに代入
-    var modal = '#' + $(this).attr('data-target');
- 
-    // モーダルをウィンドウの中央に配置する
-    function modalResize(){
-        var w = $(window).width();
-        var h = $(window).height();
- 
-        var x = (w - $(modal).outerWidth(true)) / 2;
-        var y = (h - $(modal).outerHeight(true)) / 2;
- 
-        $(modal).css({'left': x + 'px','top': y-50 + 'px'});
-    }
- 
-    // modalResizeを実行
-    modalResize();
- 
-    // modalをフェードインで表示
-    $(modal).fadeIn();
- 
-    // .modal_bgか.modal_closeをクリックしたらモーダルと背景をフェードアウトさせる
-    $('.modal_bg, .modal_close').off().click(function(){
-        $('.modal_box').fadeOut();
-        $('.modal_bg').fadeOut('slow',function(){
-            $('.modal_bg').remove();
-        });
-    });
- 
-    // ウィンドウがリサイズされたらモーダルの位置を再計算する
-    $(window).on('resize', function(){
-        modalResize();
-    });
- 
-    // .modal_switchを押すとモーダルを切り替える
-    $('.modal_switch').click(function(){
- 
-      // 押された.modal_switchの親要素の.modal_boxをフェードアウトさせる
-      $(this).parents('.modal_box').fadeOut();
- 
-      // 押された.modal_switchのdata-targetの内容をIDにしてmodalに代入
-      var modal = '#' + $(this).attr('data-target');
- 
-      // モーダルをウィンドウの中央に配置する
-      function modalResize(){
-          var w = $(window).width();
-          var h = $(window).height();
- 
-          var x = (w - $(modal).outerWidth(true)) / 2;
-          var y = (h - $(modal).outerHeight(true)) / 2;
- 
-          $(modal).css({'left': x + 'px','top': y-50 + 'px'});
-      }
- 
-      // modalResizeを実行
-      modalResize();
- 
-      $(modal).fadeIn();
- 
-      // ウィンドウがリサイズされたらモーダルの位置を再計算する
-      $(window).on('resize', function(){
-          modalResize();
-      });
-    });
-  })};
-});
-  </script>
 
 </body>
 </html>

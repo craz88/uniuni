@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/styl.css" media="screen" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script type="text/javascript" src="js/modal.js"></script>
 </head>
  
 <body>
@@ -14,22 +10,28 @@
   <a href="/main" class="modal_open" style="transform: scale(-1, 1);"><img src="{{ asset('img/back.png') }}"></a>
 </div>
 
-<div id="demoslide01" class="main_visual bg_aaa">
-  <a data-target="modal1" name="modaler" class="modal_open"><img src="{{ asset('img/write.jpeg') }}"></a>
+<div id="demoslide01" name="ico" class="main_visual bg_aaa">
+  <a data-target="modal1" name="modaler" class="modal_open">
+  	<img style="cursor: pointer;" src="{{ asset('img/write.jpeg') }}">
+  </a>
 </div>
 
 <div id="demoslide01" class="main_visual bg_aaa">
-  <a data-target="modal2" name="modaler" class="modal_open"><img src="{{ asset('img/search.jpeg') }}"></a>
+  <a data-target="modal2" name="modaler" class="modal_open">
+  	<img style="cursor: pointer;" src="{{ asset('img/search.jpeg') }}">
+</a>
 </div>
 
 <div id="demoslide01" class="main_visual bg_aaa">
-  <a data-target="modal3" name="modaler" class="modal_open"><img src="{{ asset('img/history.jpeg') }}"></a>
+  <a data-target="modal3" name="modaler" class="modal_open">
+  	<img style="cursor: pointer;" src="{{ asset('img/history.jpeg') }}">
+</a>
 </div>
 </header>
 <main>
    
 <!-- モーダル1 -->
-<div id="modal1" class="modal_box" style="padding: 84px 2vw 200px;">
+<div id="modal1" class="modal_box"　name="modq1" style="padding: 84px 2vw 200px;">
   <div class="moda1" name="youso" style="margin-top: -30px;">
     <input type="text" placeholder="Title" required="" name="title" class="title_input">
     <br>
@@ -41,7 +43,7 @@
   <div class="link_area" style="overflow: hidden;
     margin-top:-236px;
     text-align: right;">
-    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img src="{{ asset('img/right.jpeg') }}"></span></a></p>
+    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img  style="cursor: pointer;" src="{{ asset('img/right.jpeg') }}"></span></a></p>
   </div>
  
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
@@ -56,9 +58,9 @@
   </div>
   <ul>
     <li>
-  <div class="link_area" style="overflow: hidden;
+  <div class="link_area" name="ico" style="overflow: hidden;
     ">
-    <p class="modal_link"><a data-target="modal1" class="modal_switch"><span><img src="{{ asset('img/left.jpeg') }}"></span></a></p>
+    <p class="modal_link"><a data-target="modal1" class="modal_switch"><span><img  style="cursor: pointer;" src="{{ asset('img/left.jpeg') }}"></span></a></p>
   </div>
   </li>
 
@@ -67,7 +69,7 @@
  <li>
   <div class="link_area" style="overflow: hidden;
     ">
-    <p class="modal_link"><a data-target="modal3" class="modal_switch"><span><img src="{{ asset('img/right.jpeg') }}"></span></a></p>
+    <p class="modal_link"><a data-target="modal3" class="modal_switch"><span><img  style="cursor: pointer;"src="{{ asset('img/right.jpeg') }}"></span></a></p>
   </div>
   </li>
   </ul>
@@ -94,7 +96,7 @@
   <div class="link_area" style="overflow: hidden;
     margin-top:-118px;
     text-align: left;">
-    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img src="{{ asset('img/left.jpeg') }}"></span></a></p>
+    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img  style="cursor: pointer;"src="{{ asset('img/left.jpeg') }}"></span></a></p>
   </div>
  
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
