@@ -42,7 +42,6 @@ if (empty($ans)) {
  <input type="hidden" name="set1" value="{{$done_q->title}}">
  @empty
 
- <p></p>
 
 @endforelse
 @endif
@@ -52,13 +51,12 @@ if (empty($ans)) {
 
 <h1>{{$built->title}}</h1>
 <br>
-{{$built->contents}}
+<p>{{$built->contents}}</p>
 <br>
-<br><br><br>
 
 
 
-<ul>
+<ul class="answer">
 @forelse ($reps as $rep)
 
 <h1>Answer</h1>
@@ -69,22 +67,28 @@ if (empty($ans)) {
 
  @empty
 
- <p>no data</p>
+ <p>回答を待ちましょう！</p>
+ <br>
 
 @endforelse
 </ul>
 @if ($data == $built->member_id && $ans == 1 && $built->answer_switch == 0)
 <input type="submit" formaction="{{ url('/answer') }}" value="解決"> 
 @else
-....
+
 @endif
-<br><br><br><br><br><br>
-<input type="text" name="rep">
+<textarea name="rep" placeholder="Your answer" class="rep"></textarea>
 <br>
-<input type="submit" formaction="{{ url('/reply') }}" value="送信">
+<input type="submit" formaction="{{ url('/reply') }}" value="answer" class="button">
 </div>
 </form>
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 </body>

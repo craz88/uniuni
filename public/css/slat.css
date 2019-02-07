@@ -30,4 +30,41 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
  h1{
  	border-bottom: 1px solid #84b2e0;
+  font-size:24px;
  }
+
+ .answer{
+  margin-top:114px;
+ }
+
+ .main{
+  margin-bottom:87px;
+ }
+
+ .rep{
+  width:100%;
+  height:200px;
+    resize: none;
+ }
+
+
+ .button{
+  all:initial;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #7E7E7E;
+    border: solid 2px #7E7E7E;
+    border-radius: 3px;
+    transition: .4s;
+    width: 88px;
+    text-align:center;
+    margin: 10px 0px 0px 42%;
+ }
+
+ .button:hover {
+    background: black;
+    color: white;
+    text-decoration: none;
+}

@@ -16,7 +16,7 @@
   </a>
 </div>
 
-<div id="demoslide01" class="main_visual bg_aaa">
+<div id="demoslide01" name="ico" class="main_visual bg_aaa">
   <a data-target="modal2" name="modaler" class="modal_open">
   	<img style="cursor: pointer;" src="{{ asset('img/search.jpeg') }}">
 </a>
@@ -27,6 +27,12 @@
   	<img style="cursor: pointer;" src="{{ asset('img/history.jpeg') }}">
 </a>
 </div>
+
+
+<div id="demoslide01" class="main_visual bg_aaa">
+  <a href="/" class="modal_open" style="transform: scale(-1, 1);"><img src="{{ asset('img/log_out.png') }}"></a>
+</div>
+
 </header>
 <main>
    
@@ -93,7 +99,7 @@
     <br><br>
     <a href="">all</a>
  
-  <div class="link_area" style="overflow: hidden;
+  <div class="link_area" name="ico" style="overflow: hidden;
     margin-top:-118px;
     text-align: left;">
     <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img  style="cursor: pointer;"src="{{ asset('img/left.jpeg') }}"></span></a></p>
