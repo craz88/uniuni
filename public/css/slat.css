@@ -17,9 +17,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
- ul{
-  padding:initial;
-      margin:initial;
+ ul li{    
+  text-align: left;
  }
 
  .content{
@@ -35,6 +34,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
  .answer{
   margin-top:114px;
+  margin-bottom:-35px;
  }
 
  .main{
@@ -65,6 +65,27 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
  .button:hover {
     background: black;
+    color: white;
+    text-decoration: none;
+}
+
+.solve{
+  all:initial;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #7E7E7E;
+    border: solid 2px #7E7E7E;
+    border-radius: 3px;
+    transition: .4s;
+    width: 80px;
+    text-align:center;
+    margin: -5px 0px 33px 84%;
+}
+
+.solve:hover{
+   background: black;
     color: white;
     text-decoration: none;
 }

@@ -10,12 +10,12 @@ a{
 .ban{
 	text-align:left;
 	position:relative;
-	margin-top:58px;
+	margin-top:120px;
 }
 
 .title{
-	font-weight: 700;
-	font-size:25px;
+	font-weight: 600;
+	font-size:24px;
 	margin-left: 112px;
 	display:inline-block;
 	vertical-align:top;

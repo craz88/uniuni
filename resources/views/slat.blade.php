@@ -51,10 +51,8 @@ if (empty($ans)) {
 
 <h1>{{$built->title}}</h1>
 <br>
-<p>{{$built->contents}}</p>
+<p>{!! nl2br(e($built->contents)) !!}</p>
 <br>
-
-
 
 <ul class="answer">
 @forelse ($reps as $rep)
@@ -62,18 +60,18 @@ if (empty($ans)) {
 <h1>Answer</h1>
 <br>
 <li class="main">
- <p class="create">{{$rep->reply}}</p>
+ <p class="create">{!! nl2br(e($rep->reply)) !!}</p>
 </li>
 
  @empty
 
- <p>回答を待ちましょう！</p>
+ <p>・回答を待ちましょう！</p>
  <br>
 
 @endforelse
 </ul>
 @if ($data == $built->member_id && $ans == 1 && $built->answer_switch == 0)
-<input type="submit" formaction="{{ url('/answer') }}" value="解決"> 
+<input type="submit" formaction="{{ url('/answer') }}" value="解決" class="solve"> 
 @else
 
 @endif
