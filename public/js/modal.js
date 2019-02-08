@@ -7,6 +7,7 @@
        done_show = document.getElementsByName("show")[i];
        done_show.setAttribute("href", done_show
         .getAttribute("href") + "/" + math);
+    $(done_show).append($('[name=set1]')[i].value);
   }
    
   // 「.modal_open」をクリックしたらモーダルと黒い背景を表示する

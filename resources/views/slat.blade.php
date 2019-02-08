@@ -66,7 +66,7 @@ if (empty($ans)) {
  @empty
 
  <p>・回答を待ちましょう！</p>
- <br>
+ <br><br>
 
 @endforelse
 </ul>

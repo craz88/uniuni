@@ -50,7 +50,7 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 @forelse ($builts as $built)
 
 <li class="main" style="text-align:initial;">
-		<span class="answer">
+		<div class="answer">
 		@if($built->answer_switch == 1)
 		G
 		@elseif ($built->answer_switch == 0)
@@ -58,9 +58,11 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 		@else
 		out
 		@endif
-	</span>
+	</div>
+	<div class="q_title">
  <a href="{{ url('/Q&A',$built->id) }}" class="title" title="{{$built->title}}">{{$built->title}}</a>
  <p class="create">{{$built->create}}</p>
+</div>
 </li>
 
  @empty
