@@ -30,7 +30,8 @@ if (empty($ans)) {
       @slot('header')
       @endslot
       @endcomponent
-	<br><br>
+	
+
 
 <input type="hidden" name="answer_switch" value="0">
 <input type="hidden" name="built_id" id="built_id" value="{{$built->id}}">
@@ -45,7 +46,10 @@ if (empty($ans)) {
 
 @endforelse
 @endif
-
+<br>
+<div class="breadcrumbs">
+{{ Breadcrumbs::render('slat') }}
+</div>
 <div class="content">
 
 

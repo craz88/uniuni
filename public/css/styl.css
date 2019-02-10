@@ -204,6 +204,15 @@ header{
   border-bottom:1px solid #84b2e0;
 }
 
+.breadcrumbs{
+  margin-top:61px;
+  padding-left: 9%;
+    height: 35px;
+    font-size: 17px;
+    padding-top: 11px;
+    margin-bottom: -59px;
+    background-color: #e8ecef;
+}
 
  
  

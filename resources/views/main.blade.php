@@ -28,6 +28,9 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
       @endslot
       @endcomponent
 
+
+
+
 <input type="hidden" placeholder="" required="" name="menber" value="{{$data}}">
 <input type="hidden" placeholder="" required="" name="day" value="{{$day}}">
 
@@ -42,9 +45,12 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 
 @endforelse
 @endif
-</div>
 
       {{$data}}
+
+<div class="breadcrumbs">
+{{ Breadcrumbs::render('main') }}
+</div>
 
 <ul class="ban">
 @forelse ($builts as $built)
