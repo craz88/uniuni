@@ -1,0 +1,244 @@
+ /* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ ul{
+  padding:initial;
+      margin:initial;
+ }
+    ul li{
+      padding:initial;
+      margin:initial;
+      display: inline-block;
+      text-align:center;
+
+    }
+
+    .air{
+      margin:0px 35%;
+    }
+
+    .modal_open{
+    display: inline-block;
+    margin: 3vw;
+    float: left; 
+}
+ 
+.modal_box {
+    position: fixed;
+    z-index: 9999;
+    display: none;
+    width: 80%;
+    max-width: 840px;
+    margin: 0;
+    padding: 60px 2vw 170px;
+    border: 2px solid #aaa;
+    text-align: center;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.modal_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 62px;
+    font-size: 46px;
+    color: #000;
+    line-height: 62px;
+    text-align: center;
+    background: #e6e6e6;
+}
+ 
+.modal_close i {
+    line-height: 62px;
+    vertical-align: bottom;
+}
+ 
+.modal_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6666;
+    display: none;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(0,0,0,0.7);
+}
+ 
+.link_area {
+    overflow: hidden;
+    margin: auto;
+}
+ 
+.link_area .modal_link {
+    display: inline;
+}
+ 
+.link_area .modal_link a {
+    line-height: 2.5;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.moda1{
+  margin-left:20px;
+}
+
+.title_input{
+width:70%;
+height:33px;
+margin-bottom:20px;
+}
+
+.contents_input{
+width:70%;
+height:250px;
+resize: none;
+}
+ 
+.button{
+  margin-top:10px;
+      background: initial;
+    color: initial;
+    font-size: initial;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #7E7E7E;
+    border: solid 2px #7E7E7E;
+    border-radius: 3px;
+    transition: .4s;
+    width:75px;
+}
+
+/*.button{
+  margin-top:334px;
+  margin-left:25%;
+      background: initial;
+    color: initial;
+    font-size: initial;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #7E7E7E;
+    border: solid 2px #7E7E7E;
+    border-radius: 3px;
+    transition: .4s;
+    width:75px;
+    position:absolute;
+}*/
+
+.button:hover {
+    background: black;
+    color: white;
+    text-decoration: none;
+}
+
+.search_box{
+    width:33%;
+    height:33px;
+}
+/*検索ボタン*/
+.search_button{
+ background: initial;
+    color: initial;
+    font-size: initial;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #7E7E7E;
+    border: solid 2px #7E7E7E;
+    border-radius: 3px;
+    transition: .4s;
+    width:33px;
+    height:25px;
+}
+/*検索ボタンマウスオーバー時*/
+.search_button:hover{
+ background: black;
+    color: white;
+    text-decoration: none;
+}
+
+.log{
+  text-align:left;
+  width:54%;
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: 1px solid #84b2e0;
+}
+
+.modal3_log{
+  height:100px;
+  margin-top:20px;
+}
+
+header{
+  background:white;
+  width:100%;
+  height:100px;
+  position: fixed;
+  z-index:20;
+  margin-top:-1%;
+  padding-left:7%;
+  border-bottom:1px solid #84b2e0;
+}
+
+.breadcrumbs{
+  margin:64px 0px -59px 0px;
+  padding:11px 0px 0px 9%;
+    height: 35px;
+    font-size: 17px;
+    background-color: #e8ecef;
+}
+
+ 
+ 
+@media screen and (max-width: 769px) {
+ 
+/*  ウィンドウサイズ769px以下の時のスタイル  */
+ 
+  .modal_box {
+      padding: 50px 2vw 40px;
+  }
+ 
+  .modal_close {
+      width: 40px;
+      line-height: 40px;
+      font-size: 30px;
+  }
+ 
+  .modal_close i {
+      line-height: 44px;
+  }
+ 
+  .link_area {
+      margin: 25px auto 0;
+  }
+ 
+  .link_area .modal_link a {
+      margin: 15px auto 0;
+  }
+ 
+ 
+}

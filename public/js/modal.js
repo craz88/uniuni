@@ -1,20 +1,25 @@
 	$(function(){
 
-     //履歴習得
-    for(var i = 0; i < $('[name=set]').length; i++) {
-      //mathの中には質問履歴のidが入っている。
-       math = document.getElementsByName('set')[i].value;
-       done_show = document.getElementsByName("show")[i];
-       done_show.setAttribute("href", done_show
-        .getAttribute("href") + "/" + math);
-    $(done_show).append($('[name=set1]')[i].value);
-  }
+
    
   // 「.modal_open」をクリックしたらモーダルと黒い背景を表示する
   for (var i = 0; $('[name=modaler]').length; i++) {
       modal_open = document.getElementsByName('modaler')[i];
       modal_open.addEventListener('click', function() {
      
+
+      for(var i = 0; i < $('[name=set]').length; i++) {
+      //mathの中には質問履歴のidが入っている。
+       math = document.getElementsByName('set')[i].value;
+       done_show = document.getElementsByName("show")[i];
+       // done_show.setAttribute("href", done_show
+       //  .getAttribute("href") + "/" + math);
+       history.replaceState('','','/');
+       done_show.setAttribute("href", "Q&A" + "/" + math);
+    $(done_show).append($('[name=set1]')[i].value);
+  }
+
+
     // 黒い背景をbody内に追加
     $('body').append('<div class="modal_bg"></div>');
     $('.modal_bg').fadeIn();

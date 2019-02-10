@@ -87,15 +87,15 @@
 <div id="modal3" class="modal_box" style="padding: 60px 2vw 103px;">
     <span class="modal3_log">
     </span>
-    <a name="show" class="log" href="Q&A"></a>
+    <a name="show" class="log" href=""></a>
     <br>
-    <a name="show" class="log" href="Q&A"></a>
+    <a name="show" class="log" href=""></a>
     <br>
-    <a name="show" class="log" href="Q&A"></a>
+    <a name="show" class="log" href=""></a>
     <br>
-    <a name="show" class="log" href="Q&A"></a>
+    <a name="show" class="log" href=""></a>
     <br>
-    <a name="show" class="log" href="Q&A"></a>
+    <a name="show" class="log" href=""></a>
     <br><br>
     <a href="">all</a>
  

@@ -17,7 +17,7 @@ if (empty($ans)) {
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="{{ asset('js/slat.js') }}"></script>
 	<script src="{{ asset('js/modal.js') }}"></script>
-	<link rel="stylesheet" href="{{ asset('/css/styl.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('/css/head.css') }}" type="text/css">
 	<link rel="stylesheet" href="{{ asset('/css/slat.css') }}" type="text/css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>

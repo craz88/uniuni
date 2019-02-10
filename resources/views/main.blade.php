@@ -15,7 +15,7 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 	<script src="{{ asset('js/ser.js') }}"></script>
 	<script src="{{ asset('js/modal.js') }}"></script>
 	<link rel="stylesheet" href="{{ asset('/css/main.css') }}" type="text/css">
-	<link rel="stylesheet" href="{{ asset('/css/styl.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ asset('/css/head.css') }}" type="text/css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
