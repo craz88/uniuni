@@ -87,17 +87,17 @@
 <div id="modal3" class="modal_box" style="padding: 60px 2vw 103px;">
     <span class="modal3_log">
     </span>
-    <a name="show" class="log" href=""></a>
+    <a name="show" class="log" href="" style="text-decoration: none; color: initial;"></a>
     <br>
-    <a name="show" class="log" href=""></a>
+    <a name="show" class="log" href="" style="text-decoration: none; color: initial;"></a>
     <br>
-    <a name="show" class="log" href=""></a>
+    <a name="show" class="log" href="" style="text-decoration: none; color: initial;"></a>
     <br>
-    <a name="show" class="log" href=""></a>
+    <a name="show" class="log" href="" style="text-decoration: none; color: initial;"></a>
     <br>
-    <a name="show" class="log" href=""></a>
+    <a name="show" class="log" href="" style="text-decoration: none; color: initial;"></a>
     <br><br>
-    <a href="">all</a>
+    <a href="{{ url('/user','history') }}" style="text-decoration: none; color: initial;">all</a>
  
   <div class="link_area" name="ico" style="overflow: hidden;
     margin-top:-118px;

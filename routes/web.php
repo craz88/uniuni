@@ -16,13 +16,14 @@ Route::get('/new','PostsController@New');
 Route::post('/next','PostsController@Next');
 Route::post('/main','PostsController@Main');
 
-
+//何か機能を追加した場合Pagingを読ませないとページング機能が動かないくなる。
 Route::get('/next','MainController@Paging');
 Route::get('/main','MainController@Paging');
 Route::get('/main_input','MainController@Paging');
 
 
 Route::post('/main_input','MainController@Main_input');
+Route::get('/user/history','MainController@User_history');
 Route::get('{word?}','MainController@Serch_Paging');
 
 

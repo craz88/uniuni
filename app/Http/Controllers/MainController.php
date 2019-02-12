@@ -39,6 +39,11 @@ class MainController extends Controller
     return view('main',['data'=>$data,'builts'=>$built]);
  }
 
+
+public function User_history() {
+     return view('history');
+ }
+
 public function S() {
      return view('head');
  }

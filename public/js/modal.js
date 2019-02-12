@@ -14,11 +14,12 @@
        done_show = document.getElementsByName("show")[i];
        // done_show.setAttribute("href", done_show
        //  .getAttribute("href") + "/" + math);
-       history.replaceState('','','/');
+       // history.replaceState('','','/');
        done_show.setAttribute("href", "Q&A" + "/" + math);
     $(done_show).append($('[name=set1]')[i].value);
   }
 
+       history.replaceState('','','/');
 
     // 黒い背景をbody内に追加
     $('body').append('<div class="modal_bg"></div>');
