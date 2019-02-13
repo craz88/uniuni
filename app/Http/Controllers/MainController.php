@@ -19,13 +19,13 @@ class MainController extends Controller
      $Built->create = $request->day;
      $Built->save();
      
-     $built = Built::latest()->paginate(8);
+     $built = Built::latest()->paginate(18);
      return view('main',['data'=>$data],['builts'=>$built]);
  }
 
   public function Serch_Paging($word) {
       $buil = Built::where('title','LIKE','%'.$word.'%')->orWhere('contents','LIKE','%'.$word.'%');
-     $built = $buil->latest()->paginate(8);
+     $built = $buil->latest()->paginate(18);
      $data = session()->get('data');
      return view('main',['builts'=>$built,'data'=>$data]);
  }
@@ -34,7 +34,7 @@ class MainController extends Controller
     
     $data = session()->get('data');
     // dd($data);
-    $built = Built::latest()->paginate(8);
+    $built = Built::latest()->paginate(18);
     // dd($data);
     return view('main',['data'=>$data,'builts'=>$built]);
  }
@@ -46,7 +46,7 @@ public function User_history() {
  }
 
 public function S() {
-     return view('head');
+     return view('footer');
  }
  //    public function Main_key() {
  //        $word = Input::get('word');

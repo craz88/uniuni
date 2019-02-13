@@ -60,7 +60,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     transition: .4s;
     width: 88px;
     text-align:center;
-    margin: 10px 0px 0px 42%;
+    margin: 10px 0px 48px 42%;
  }
 
  .button:hover {

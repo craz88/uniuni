@@ -17,6 +17,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
+form{
+  width:100%;
+}
+
  ul{
   padding:initial;
       margin:initial;
@@ -170,8 +174,8 @@ resize: none;
     border: solid 2px #7E7E7E;
     border-radius: 3px;
     transition: .4s;
-    width:33px;
-    height:25px;
+    width:68px;
+    height:36px;
 }
 /*検索ボタンマウスオーバー時*/
 .search_button:hover{
@@ -207,9 +211,16 @@ header{
 .breadcrumbs{
   margin:64px 0px -59px 0px;
   padding:11px 0px 0px 9%;
-    height: 35px;
+    height: 48px;
     font-size: 17px;
     background-color: #e8ecef;
+}
+
+/*ページネーションcss*/
+
+.pagination{
+  margin: 57px 0px 57px 23%;
+  width: 54%;
 }
 
  
