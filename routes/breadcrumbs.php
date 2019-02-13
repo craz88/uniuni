@@ -12,11 +12,10 @@ Breadcrumbs::for('slat', function ($trail) {
     $trail->push('>contents', url('slat'));
 });
 
-// ホーム > 本の一覧 >  [Title]
-Breadcrumbs::for('showBook', function ($trail, $book) {
-    $trail->parent('books');
-    $trail->push($book->book_title, url('books/' . $book->id));
-
+// main > history
+Breadcrumbs::for('history', function ($trail) {
+    $trail->parent('main');
+    $trail->push('>Your history', url('history'));
 });
 
 // ホーム > 本の一覧 >  [Title]  > 編集

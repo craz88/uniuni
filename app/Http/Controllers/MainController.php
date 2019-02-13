@@ -41,7 +41,8 @@ class MainController extends Controller
 
 
 public function User_history() {
-     return view('history');
+    $data = session()->get('data');
+     return view('history',['data'=>$data]);
  }
 
 public function S() {

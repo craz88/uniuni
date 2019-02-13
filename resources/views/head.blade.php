@@ -22,7 +22,7 @@
 </a>
 </div>
 
-<div id="demoslide01" class="main_visual bg_aaa">
+<div id="demoslide01" name="iko" class="main_visual bg_aaa">
   <a data-target="modal3" name="modaler" class="modal_open">
   	<img style="cursor: pointer;" src="{{ asset('img/history.jpeg') }}">
 </a>

@@ -1,0 +1,56 @@
+.right{
+	text-align:right;
+}
+
+a{
+	text-decoration: none;
+	color:initial;
+}
+
+.ban{
+	text-align:left;
+	margin-top:120px;
+}
+
+.title{
+	font-weight: 600;
+	font-size:24px;
+	margin-bottom:14px;
+	margin-left: 112px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.create{
+	text-align: right;
+	margin-left: 40%;
+	margin-bottom:7px;
+	width: 60%;
+}
+
+.main{
+  list-style-type : none;
+  width: 54%;
+  margin-top: 23px;
+  margin-left: 9%;
+  border-bottom:1px solid #84b2e0;
+}
+
+.answer{
+	margin-left: 0%;
+	margin-top: -23px;
+	font-size: 85px;
+	margin-bottom:-90px;
+}
+
+.q_title{
+	margin-left:1%;
+}
+
+h1{
+	    border-bottom: 1px solid #84b2e0;
+    font-size: 24px;
+    margin-top: 152px;
+    width: 54%;
+    margin-left: 9%;
+}
