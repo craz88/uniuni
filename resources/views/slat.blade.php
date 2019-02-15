@@ -3,6 +3,11 @@ use App\Built;
 $data = session()->get('data');
 $ans=$reps->toArray();
 $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
+if (!empty($data)) {
+     $session=1;
+}else{
+	$session=0;
+}
 if (empty($ans)) {
 	$ans = 0;
 }else{
@@ -79,9 +84,17 @@ if (empty($ans)) {
 @else
 
 @endif
-<textarea name="rep" placeholder="Your answer" class="rep"></textarea>
+
+
+
+@if ($session==0)
+
+@else
+<textarea required="" name="rep" placeholder="Your answer" class="rep"></textarea>
 <br>
 <input type="submit" formaction="{{ url('/reply') }}" value="answer" class="button">
+@endif
+
 </div>
 
 <div class="public">

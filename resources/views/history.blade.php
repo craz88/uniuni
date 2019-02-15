@@ -52,5 +52,20 @@ $builts = Built::where('member_id',$data)->latest()->get();
 
 @endforelse
 </ul>
+
+<div class="public">
+  @component('side')
+      @slot('side')
+      @slot('side2')
+      @endslot
+      @endcomponent
+</div>
+
+<div class="place_footer">
+      @component('footer')
+      @slot('footer')
+      @endslot
+      @endcomponent
+</div>
 </body>
 </html>

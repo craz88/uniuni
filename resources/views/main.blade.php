@@ -28,7 +28,7 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
       @slot('header')
       @endslot
       @endcomponent
-
+<br>
 
 <input type="hidden" placeholder="" required="" name="menber" value="{{$data}}">
 <input type="hidden" placeholder="" required="" name="day" value="{{$day}}">
@@ -45,7 +45,6 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 @endforelse
 @endif
 
-      {{$data}}
 
 <div class="breadcrumbs">
 {{ Breadcrumbs::render('main') }}
