@@ -14,7 +14,7 @@ a{
 
 .title{
 	font-weight: 600;
-	font-size:24px;
+	font-size:22px;
 	margin-bottom:14px;
 	margin-left: 112px;
 	display:inline-block;
@@ -45,4 +45,18 @@ a{
 
 .q_title{
 	margin-left:1%;
+}
+
+
+.public{
+	width:100%;
+  position:absolute;
+  z-index: -20;
+  float:right;
+  top:234px;
+}
+
+.place_footer{
+	margin-top:21px;
+   height: 50px;
 }

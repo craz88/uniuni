@@ -84,11 +84,21 @@ if (empty($ans)) {
 <input type="submit" formaction="{{ url('/reply') }}" value="answer" class="button">
 </div>
 
- @component('footer')
+<div class="public">
+  @component('side')
+      @slot('side')
+      @slot('side2')
+      @endslot
+      @endcomponent
+</div>
+ <div class="place_footer">
+
+
+      @component('footer')
       @slot('footer')
       @endslot
       @endcomponent
-      
+</div>
 </form>
 </body>
 </html>

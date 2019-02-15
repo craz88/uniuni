@@ -30,8 +30,6 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
       @endcomponent
 
 
-
-
 <input type="hidden" placeholder="" required="" name="menber" value="{{$data}}">
 <input type="hidden" placeholder="" required="" name="day" value="{{$day}}">
 
@@ -78,6 +76,16 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 
 @endforelse
 </ul>
+
+<div class="public">
+  @component('side')
+      @slot('side')
+      @slot('side2')
+      @endslot
+      @endcomponent
+</div>
+
+<div class="place_footer">
 {!! $builts->links('vendor.pagination.bootstrap-4'); !!}
 
 
@@ -85,7 +93,7 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
       @slot('footer')
       @endslot
       @endcomponent
-
+</div>
 </form>
  
 </body>

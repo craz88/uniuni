@@ -46,7 +46,7 @@ public function User_history() {
  }
 
 public function S() {
-     return view('footer');
+     return view('side');
  }
  //    public function Main_key() {
  //        $word = Input::get('word');
