@@ -25,6 +25,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
  	width: 54%;
     margin-top: 155px;
     margin-left: 9%;
+    margin-bottom:203px;
  }
 
  h1{
@@ -60,7 +61,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     transition: .4s;
     width: 88px;
     text-align:center;
-    margin: 10px 0px 48px 42%;
+    margin: 10px 0px 0px 42%;
  }
 
  .button:hover {
@@ -91,7 +92,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 .place_footer{
-  margin-top:21px;
+  margin-top:-138px;
    height: 50px;
 }
 
@@ -102,4 +103,28 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   z-index: -20;
   float:right;
   top:234px;
+}
+
+.login_button{
+  background: initial;
+    color: initial;
+    font-size: initial;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #7E7E7E;
+    border: solid 2px #7E7E7E;
+    border-radius: 3px;
+    transition: .4s;
+    width: 68px;
+    height: 25px;
+    text-align:center;
+    margin:14px 0px 0px 39%;
+}
+
+.login_button:hover{
+ background: black;
+    color: white;
+    text-decoration: none;
 }

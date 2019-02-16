@@ -56,9 +56,9 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 <li class="main" style="text-align:initial;">
 		<div class="answer">
 		@if($built->answer_switch == 1)
-		G
+		<img style="cursor: pointer;" src="{{ asset('img/check.png') }}">
 		@elseif ($built->answer_switch == 0)
-		H
+		<img style="cursor: pointer;" src="{{ asset('img/q.png') }}">
 		@else
 		out
 		@endif

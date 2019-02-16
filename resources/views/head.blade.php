@@ -12,7 +12,7 @@
 
 <div id="demoslide01" name="ico" class="main_visual bg_aaa">
   <a data-target="modal1" name="modaler" class="modal_open">
-  	<img style="cursor: pointer;" src="{{ asset('img/write.jpeg') }}">
+  	<img style="cursor: pointer;" src="{{ asset('img/write.png') }}">
   </a>
 </div>
 
@@ -24,7 +24,7 @@
 
 <div id="demoslide01" name="iko" class="main_visual bg_aaa">
   <a data-target="modal3" name="modaler" class="modal_open">
-  	<img style="cursor: pointer;" src="{{ asset('img/history.jpeg') }}">
+  	<img style="cursor: pointer;" src="{{ asset('img/history.png') }}">
 </a>
 </div>
 
@@ -49,7 +49,7 @@
   <div class="link_area" style="overflow: hidden;
     margin-top:-236px;
     text-align: right;">
-    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img  style="cursor: pointer;" src="{{ asset('img/right.jpeg') }}"></span></a></p>
+    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img  style="cursor: pointer;" src="{{ asset('img/search.jpeg') }}"></span></a></p>
   </div>
  
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
@@ -66,7 +66,7 @@
     <li>
   <div class="link_area" name="ico" style="overflow: hidden;
     ">
-    <p class="modal_link"><a data-target="modal1" class="modal_switch"><span><img  style="cursor: pointer;" src="{{ asset('img/left.jpeg') }}"></span></a></p>
+    <p class="modal_link"><a data-target="modal1" class="modal_switch"><span><img  style="cursor: pointer;" src="{{ asset('img/write.png') }}"></span></a></p>
   </div>
   </li>
 
@@ -75,7 +75,7 @@
  <li>
   <div class="link_area" style="overflow: hidden;
     ">
-    <p class="modal_link"><a data-target="modal3" class="modal_switch"><span><img  style="cursor: pointer;"src="{{ asset('img/right.jpeg') }}"></span></a></p>
+    <p class="modal_link"><a data-target="modal3" class="modal_switch"><span><img  style="cursor: pointer;"src="{{ asset('img/history.png') }}"></span></a></p>
   </div>
   </li>
   </ul>
@@ -102,7 +102,7 @@
   <div class="link_area" name="ico" style="overflow: hidden;
     margin-top:-118px;
     text-align: left;">
-    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img  style="cursor: pointer;"src="{{ asset('img/left.jpeg') }}"></span></a></p>
+    <p class="modal_link"><a data-target="modal2" class="modal_switch"><span><img  style="cursor: pointer;"src="{{ asset('img/search.jpeg') }}"></span></a></p>
   </div>
  
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>

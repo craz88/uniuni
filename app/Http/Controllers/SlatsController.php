@@ -32,6 +32,19 @@ class SlatsController extends Controller
       }
 
       public function Reply(Request $request) {
+     //    $space=$request->rep;
+     //    if (empty($space)) {
+     //      $built_id=$request->built_id;
+     //      $built = Built::findOrFail($built_id);
+     //      $query = Answer::query();
+     // $query->where('built_id',$built_id);
+     // $reps = $query->get();
+     //      return back()->withInput()->with(['built'=>$built,'reps'=>$reps]);
+     //    }
+        $space=$request->rep;
+        if (empty($space)) {
+          return back()->withInput();
+        }
      $built_id=$request->built_id;
      $rep = $request->rep;
 

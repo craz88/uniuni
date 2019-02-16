@@ -48,7 +48,7 @@ $builts = Built::where('member_id',$data)->latest()->get();
 
  @empty
 
- <p>no data</p>
+ <div class="push">no data</div>
 
 @endforelse
 </ul>

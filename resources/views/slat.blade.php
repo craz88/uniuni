@@ -62,7 +62,6 @@ if (empty($ans)) {
 <br>
 <p>{!! nl2br(e($built->contents)) !!}</p>
 <br>
-
 <ul class="answer">
 @forelse ($reps as $rep)
 
@@ -86,16 +85,15 @@ if (empty($ans)) {
 @endif
 
 
-
-@if ($session==0)
-
-@else
-<textarea required="" name="rep" placeholder="Your answer" class="rep"></textarea>
+<textarea  name="rep" placeholder="Your answer" class="rep"></textarea>
 <br>
+@if ($session != 0)
 <input type="submit" formaction="{{ url('/reply') }}" value="answer" class="button">
+@else
+<a href="{{ url('/new') }}" class="login_button">Login</a>
 @endif
-
 </div>
+
 
 <div class="public">
   @component('side')
@@ -105,8 +103,7 @@ if (empty($ans)) {
       @endcomponent
 </div>
  <div class="place_footer">
-
-
+<br>
       @component('footer')
       @slot('footer')
       @endslot
