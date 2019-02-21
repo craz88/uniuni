@@ -8,13 +8,19 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function Main_input(Request $request) {
+       
+    $title = $request->title;
+    $content = $request->content;
+        if (empty($title) or empty($content) ) {
+          return back();
+        }
      $data = $request->menber;
      $answer_switch = 0;
-
+     
      $Built = new Built();
      $Built->member_id = $data;
-     $Built->title = $request->title;
-     $Built->contents = $request->content;
+     $Built->title = $title;
+     $Built->contents = $content;
      $Built->answer_switch = $answer_switch;
      $Built->create = $request->day;
      $Built->save();
@@ -42,7 +48,8 @@ class MainController extends Controller
 
 public function User_history() {
     $data = session()->get('data');
-     return view('history',['data'=>$data]);
+    $builts = Built::where('member_id',$data)->latest()->paginate(18);
+     return view('history',['data'=>$data,'builts'=>$builts]);
  }
 
 public function S() {

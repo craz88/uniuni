@@ -31,7 +31,7 @@ if (empty($ans)) {
 <form action="" method="post">
 	{{ csrf_field() }}
 
-      @component('head')
+      @component('layouts.head')
       @slot('header')
       @endslot
       @endcomponent
