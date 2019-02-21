@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
- 
-<body>
+
  <header>
 
 <div id="demoslide01" class="main_visual bg_aaa">
@@ -108,5 +103,3 @@
   <p><a class="modal_close"><i class="zmdi zmdi-close"></i></a></p>
 </div>
 </main>
-</body>
-</html>

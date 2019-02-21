@@ -4,8 +4,6 @@
 @section('out_code')
     <script src="{{ asset('js/history.js') }}"></script>
 	<script src="{{ asset('js/modal.js') }}"></script>
-	<link rel="stylesheet" href="{{ asset('/css/head.css') }}" type="text/css">
-	<link rel="stylesheet" href="{{ asset('/css/history.css') }}" type="text/css">
 @endsection
 
 @section('bread')

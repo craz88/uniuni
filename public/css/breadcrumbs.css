@@ -1,3 +1,9 @@
 .breadcrmb{
 	background:red;
 }
+
+@media screen and (max-width: 1194px){
+    .breadcrumb{
+    	padding-left:2%;
+    }
+}

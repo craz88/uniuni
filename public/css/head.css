@@ -214,6 +214,12 @@ header{
     height: 48px;
     font-size: 17px;
     background-color: #e8ecef;
+    width:100%;
+}
+
+.place_footer{
+  margin-top:21px;
+   height: 50px;
 }
 
 /*ページネーションcss*/
@@ -223,7 +229,28 @@ header{
   width: 54%;
 }
 
- 
+ @media screen and (max-width: 1194px){
+    header{
+      padding-left:25%;
+    }
+
+    .breadcrumbs{
+  padding:11px 0px 0px 16%;
+}
+
+.pagination{
+  margin: 0%;
+  display: inline;
+  margin-right:-4%;
+}
+
+.place_footer{
+  margin-top:60px;
+   height: 50px;
+   text-align:center;
+}
+
+}
  
 @media screen and (max-width: 769px) {
  

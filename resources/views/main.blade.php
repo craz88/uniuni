@@ -5,8 +5,6 @@
     <script src="{{ asset('js/ser.js') }}"></script>
 	<script src="{{ asset('js/modal.js') }}"></script>
 	<script src="{{ asset('js/url.js') }}"></script>
-	<link rel="stylesheet" href="{{ asset('/css/head.css') }}" type="text/css">
-	<link rel="stylesheet" href="{{ asset('/css/main.css') }}" type="text/css">
 @endsection
 
 @section('bread')

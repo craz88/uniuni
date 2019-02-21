@@ -6,17 +6,18 @@ Breadcrumbs::for('main', function ($trail) {
 });
 
 
+// main > history
+Breadcrumbs::for('history', function ($trail) {
+    $trail->parent('main');
+    $trail->push('>Your history', url('history'));
+});
+
 // main > contents
 Breadcrumbs::for('slat', function ($trail) {
     $trail->parent('main');
     $trail->push('>contents', url('slat'));
 });
 
-// main > history
-Breadcrumbs::for('history', function ($trail) {
-    $trail->parent('main');
-    $trail->push('>Your history', url('history'));
-});
 
 // ホーム > 本の一覧 >  [Title]  > 編集
 Breadcrumbs::for('editBook', function ($trail, $book) {

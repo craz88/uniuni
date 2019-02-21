@@ -53,7 +53,7 @@ public function User_history() {
  }
 
 public function S() {
-     return view('side');
+     return view('layouts.head');
  }
  //    public function Main_key() {
  //        $word = Input::get('word');
