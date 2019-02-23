@@ -232,10 +232,12 @@ header{
  @media screen and (max-width: 1194px){
     header{
       padding-left:25%;
+      height:75px;
     }
 
     .breadcrumbs{
   padding:11px 0px 0px 16%;
+  margin-top:40px;
 }
 
 .pagination{
@@ -279,4 +281,20 @@ header{
   }
  
  
+}
+
+@media screen and (max-width: 769px) {
+     
+     header{
+      padding-left:13%;
+     }
+
+}
+
+@media screen and (max-width: 322px) {
+     
+     .air {
+    margin: 0px 34%;
+}
+
 }

@@ -16,9 +16,11 @@
 @media screen and (max-width: 1194px){
    .side{
    	margin:10px auto;
+   	width:100%;
    }
 
    .side2{
    	margin:1px auto;
+   	width:100%;
    }
 }
