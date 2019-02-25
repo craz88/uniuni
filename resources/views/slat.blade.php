@@ -2,7 +2,6 @@
 use App\Built;
 $data = session()->get('data');
 $ans=$reps->toArray();
-$done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 if (!empty($data)) {
      $session=1;
 }else{
@@ -41,16 +40,6 @@ if (empty($ans)) {
 <input type="hidden" name="answer_switch" value="0">
 <input type="hidden" name="built_id" id="built_id" value="{{$built->id}}">
 
-@if (!empty($done_qs))
-
-	@forelse ($done_qs as $done_q)
- <input type="hidden" name="set" value="{{$done_q->id}}">
- <input type="hidden" name="set1" value="{{$done_q->title}}">
- @empty
-
-
-@endforelse
-@endif
 <br>
 <div class="breadcrumbs">
 {{ Breadcrumbs::render('slat') }}

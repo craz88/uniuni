@@ -2,7 +2,6 @@
 use App\Built;
 $day = date("Y/m月d日");
 $answer = 1;
-$done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 // dd($done_qs->toArray());
 ?>
 
@@ -31,19 +30,6 @@ $done_qs = Built::where('member_id',$data)->latest()->take(5)->get();
 
 <input type="hidden" placeholder="" required="" name="menber" value="{{$data}}">
 <input type="hidden" placeholder="" required="" name="day" value="{{$day}}">
-
-	@if (!empty($done_qs))
-
-	@forelse ($done_qs as $done_q)
- <input type="hidden" name="set" value="{{$done_q->id}}">
- <input type="hidden" name="set1" value="{{$done_q->title}}">
- @empty
-
- <p></p>
-
-@endforelse
-@endif
-
 
 <div class="breadcrumbs">
 @yield('bread')
