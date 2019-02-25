@@ -18,19 +18,19 @@ if (empty($ans)) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>{{$built->title}}</title>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="{{ asset('js/slat.js') }}"></script>
 	<script src="{{ asset('js/modal.js') }}"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="{{ asset('/css/head.css') }}" type="text/css">
 	<link rel="stylesheet" href="{{ asset('/css/slat.css') }}" type="text/css">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
 
 <form action="" method="post">
 	{{ csrf_field() }}
-
+  <div class="wrap">
       @component('layouts.head')
       @slot('header')
       @endslot
@@ -88,9 +88,9 @@ if (empty($ans)) {
 <textarea  name="rep" placeholder="Your answer" class="rep"></textarea>
 <br>
 @if ($session != 0)
-<input type="submit" formaction="{{ url('/reply') }}" value="answer" class="button">
+<div class="center"><input type="submit" formaction="{{ url('/reply') }}" value="answer" class="button"></div>
 @else
-<a href="{{ url('/new') }}" class="login_button">Login</a>
+<div class="center"><a href="{{ url('/new') }}" class="login_button">Login</a></div>
 @endif
 </div>
 
@@ -101,6 +101,7 @@ if (empty($ans)) {
       @slot('side2')
       @endslot
       @endcomponent
+</div>
 </div>
  <div class="place_footer">
 <br>

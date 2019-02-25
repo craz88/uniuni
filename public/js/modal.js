@@ -21,16 +21,16 @@ $(function(){
 
       for(var i = 0; i < $('[name=set]').length; i++) {
       //mathの中には質問履歴のidが入っている。
-       // math = document.getElementsByName('set')[i].value;
+       math = document.getElementsByName('set')[i].value;
        done_show = document.getElementsByName("show")[i];
        // done_show.setAttribute("href", done_show
        //  .getAttribute("href") + "/" + math);
        // history.replaceState('','','/');
-       // done_show.setAttribute("href", "Q&A" + "/" + math);
+       done_show.setAttribute("href", "Q&A" + "/" + math);
     $(done_show).append($('[name=set1]')[i].value);
   }
 
-       // history.replaceState('','','/');
+       history.replaceState('','','/');
 
     // 黒い背景をbody内に追加
     $('body').append('<div class="modal_bg"></div>');

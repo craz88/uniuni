@@ -19,6 +19,7 @@ a{
 	margin-left: 112px;
 	display:inline-block;
 	vertical-align:top;
+  word-break: break-all;
 }
 
 .create{
@@ -77,4 +78,12 @@ a{
     margin-left: 0%;
     border-bottom: 1px solid #84b2e0;
 }
+}
+
+@media screen and (max-width: 780px){
+
+   .main{
+    width:90%;
+   }
+
 }

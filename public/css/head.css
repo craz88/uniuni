@@ -160,6 +160,7 @@ resize: none;
 .search_box{
     width:33%;
     height:33px;
+    margin-bottom:17px;
 }
 /*検索ボタン*/
 .search_button{
@@ -190,6 +191,7 @@ resize: none;
     display: inline-block;
     vertical-align: top;
     border-bottom: 1px solid #84b2e0;
+    word-break: break-all;
 }
 
 .modal3_log{
@@ -228,6 +230,13 @@ header{
   margin: 57px 0px 57px 23%;
   width: 54%;
 }
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: initial;
+    }
 
  @media screen and (max-width: 1194px){
     header{

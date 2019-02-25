@@ -1,5 +1,4 @@
-
- <header>
+<header>
 
 <div id="demoslide01" class="main_visual bg_aaa">
   <a href="/main" class="modal_open" style="transform: scale(-1, 1);"><img src="{{ asset('img/back.png') }}"></a>

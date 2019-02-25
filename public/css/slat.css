@@ -1,21 +1,6 @@
- /* Reset CSS */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
+ body{
+  width:100%;
+ }
 
  ul li{    
   text-align: left;
@@ -61,7 +46,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     transition: .4s;
     width: 88px;
     text-align:center;
-    margin: 10px 0px 0px 42%;
+    margin-top:10px;
  }
 
  .button:hover {
@@ -127,4 +112,21 @@ table, caption, tbody, tfoot, thead, tr, th, td {
  background: black;
     color: white;
     text-decoration: none;
+}
+
+.wrap{
+  overflow:hidden;
+}
+
+.center{
+	text-align:center;
+}
+
+
+@media screen and (max-width: 1193px) {
+     
+     .content{
+      margin: 796px auto 109px auto;
+     }
+
 }
