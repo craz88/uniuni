@@ -44,10 +44,8 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $e)
+    public function render($request, Exception $exception)
     {
-        if ($e instanceof \Illuminate\Session\TokenMismatchException){
-        session()->flash('csrfError', true);
-        return redirect()->to(main);
+        return parent::render($request, $exception);
     }
 }

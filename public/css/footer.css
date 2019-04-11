@@ -1,12 +1,23 @@
 footer{
-	width:100%;
-	height:100px;
-	margin-top:60px;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
 	text-align:center;
 	border-top: 1px solid #84b2e0;
+	background-color:white;
 }
 
 h2{
 	padding-top:10px;
-	font: bold 30px cursive;
+	font-size:30px;
+}
+
+@media screen and (max-width: 940px) {
+     
+     footer{
+	height:66px;
+}
+
+
 }

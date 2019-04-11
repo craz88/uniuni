@@ -74,7 +74,7 @@ form:after {
 	color: black;
 	font: bold 30px Helvetica, Arial, sans-serif;
 	letter-spacing: 0.25em;
-	line-height: 20px;
+	line-height: 30px;
 	margin: 10px 0 30px;
 }
 #content h1:before,
@@ -189,7 +189,7 @@ form:after {
 }
 
 span{
-	font: bold 30px cursive;
+	font-size:30px;
 }
 
 @media screen and ( max-width:800px ){

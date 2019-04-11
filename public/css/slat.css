@@ -16,6 +16,11 @@
  h1{
  	border-bottom: 1px solid #84b2e0;
   font-size:24px;
+      word-break: break-all;
+ }
+
+ p{
+ 	word-break: break-all;
  }
 
  .answer{
@@ -129,4 +134,17 @@
       margin: 796px auto 109px auto;
      }
 
+}
+
+@media screen and (max-width: 940px) {
+     
+     .content{
+      width:80%;
+     }
+}
+
+@media screen and (max-width: 520px) {
+	.solve {
+    margin: -5px 0px 33px 60%;
+}
 }

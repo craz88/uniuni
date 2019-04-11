@@ -214,7 +214,31 @@ header{
 
 .place_footer{
   margin-top:21px;
+  margin-bottom:145px;
    height: 50px;
+}
+
+.login_button{
+  background: initial;
+    color: initial;
+    font-size: initial;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #7E7E7E;
+    border: solid 2px #7E7E7E;
+    border-radius: 3px;
+    transition: .4s;
+    width: 68px;
+    height: 36px;
+    text-align: center;
+}
+
+.login_button:hover{
+ background: black;
+    color: white;
+    text-decoration: none;
 }
 
 /*ページネーションcss*/
